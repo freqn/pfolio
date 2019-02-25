@@ -17,6 +17,16 @@
     <%= f.text_area :body %>
   </div>
 
+  <h4>Technologies</h4>
+  <ul>
+    <%= f.fields_for :technologies do |tech| %>
+      <li>
+        <%= tech.label :name %>
+        <%= tech.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= f.submit %>
   </div>
